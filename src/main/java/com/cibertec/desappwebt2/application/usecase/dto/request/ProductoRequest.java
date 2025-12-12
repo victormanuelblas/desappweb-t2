@@ -11,5 +11,5 @@ public class ProductoRequest {
     private String nombreProducto;
     private Integer cantidad;
     private Double precioUnitario;
-    private Integer proveedor;
+    private Integer proveedorId;
 }
