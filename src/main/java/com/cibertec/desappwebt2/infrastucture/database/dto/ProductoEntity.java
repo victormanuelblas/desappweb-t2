@@ -24,7 +24,7 @@ public class ProductoEntity {
     @Column(name = "precio_unitario", nullable = false)
     private Double precioUnitario;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "proveedor_id")
     private ProveedorEntity proveedor;
 }
