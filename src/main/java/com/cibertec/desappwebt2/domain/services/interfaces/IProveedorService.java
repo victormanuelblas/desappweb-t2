@@ -1,14 +1,14 @@
-package com.cibertec.desappwebt2.application.usecase.interfaces;
+package com.cibertec.desappwebt2.domain.services.interfaces;
 
 import com.cibertec.desappwebt2.application.usecase.dto.request.ProveedorRequest;
 import com.cibertec.desappwebt2.application.usecase.dto.response.ProveedorResponse;
 
 import java.util.List;
 
-public interface IProveedorInterface {
+public interface IProveedorService {
     List<ProveedorResponse> findAll();
     ProveedorResponse findById(Integer id);
-    ProveedorResponse save(ProveedorRequest entity);
-    void deleteById(Integer id);
-    ProveedorResponse update(Integer id, ProveedorRequest entity);
+    ProveedorResponse save(ProveedorRequest request);
+    ProveedorResponse update(Integer id, ProveedorRequest request);
+    void delete(Integer id);
 }

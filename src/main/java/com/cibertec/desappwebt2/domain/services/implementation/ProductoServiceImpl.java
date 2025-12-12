@@ -42,8 +42,11 @@ public class ProductoServiceImpl implements IProductoService {
 
     @Override
     public ProductoResponse save(ProductoRequest request) {
+
         ProductoEntity productoEntity = objectMapper.convertValue(request, ProductoEntity.class);
-        ProductoResponse productoResponse = objectMapper.convertValue(productoEntity, ProductoResponse.class);
+        var response = productoRepository.save(productoEntity);
+        var productoResponse = objectMapper.convertValue(response, ProductoResponse.class);
+
         return productoResponse;
     }
 

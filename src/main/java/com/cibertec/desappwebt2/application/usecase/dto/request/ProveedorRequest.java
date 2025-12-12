@@ -1,5 +1,6 @@
 package com.cibertec.desappwebt2.application.usecase.dto.request;
 
+import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,9 +8,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductoRequest {
-    private String nombreProducto;
-    private Integer cantidad;
-    private Double precioUnitario;
-    private Integer proveedor;
+public class ProveedorRequest {
+    private String nombreProveedor;
+    private String direccion;
+    private String apoderadoLegal;
 }
